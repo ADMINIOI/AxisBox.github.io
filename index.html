@@ -281,7 +281,14 @@
         </div>
     </footer>
 <link rel="manifest" href="/manifest.json">
+    <script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/service-worker.js');
+  }
+</script>
     <script src="js/script.js"></script>
+    
 </body>
 
 </html>
+
