@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axis Box - Профессиональная 3D-печать</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Фоновое видео -->
+    <div class="video-background">
+        <video autoplay muted loop id="bg-video">
+            <source src="assets/videos/3d-printing-bg.mov" type="video/quicktime">
+            <source src="assets/videos/3d-printing-bg.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+
+    <!-- Навигация -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="#00FFAA" stroke-width="2"/>
+                        <path d="M25 5V25M25 25L45 15M25 25L5 15" stroke="#00FFAA" stroke-width="2"/>
+                    </svg>
+                    <span>Axis Box</span>
+                </div>
+                <div class="menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главная секция -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Воплощаем <span class="highlight">идеи</span> в реальность</h1>
+                <p>Профессиональная 3D-печать любой сложности с использованием современных технологий и материалов</p>
+                <div class="hero-buttons">
+                    <a href="#services" class="btn btn-primary">Наши услуги</a>
+                    <a href="#contact" class="btn btn-secondary">Связаться с нами</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция услуг -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">Наши <span class="highlight">услуги</span></h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <h3>3D-печать</h3>
+                    <p>Высокоточная печать объектов любой сложности с использованием различных материалов</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>3D-моделирование</h3>
+                    <p>Создание трехмерных моделей по вашим эскизам, чертежам или описаниям</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Прототипирование</h3>
+                    <p>Быстрое создание прототипов для тестирования и демонстрации ваших идей</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <h3>Мелкосерийное производство</h3>
+                    <p>Изготовление малых партий изделий для вашего бизнеса или проекта</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция галереи -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Наши <span class="highlight">работы</span></h2>
+            <div class="gallery-filter">
+                <button class="filter-btn active" data-filter="all">Все работы</button>
+                <button class="filter-btn" data-filter="prototypes">Прототипы</button>
+                <button class="filter-btn" data-filter="models">Модели</button>
+                <button class="filter-btn" data-filter="art">Арт-объекты</button>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item" data-category="prototypes">
+                    <img src="assets/images/gallery/item1.jpg" alt="3D-печать прототипа">
+                    <div class="gallery-overlay">
+                        <h3>Прототип механизма</h3>
+                        <p>Функциональный прототип для тестирования</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="models">
+                    <img src="assets/images/gallery/item2.jpg" alt="3D-модель здания">
+                    <div class="gallery-overlay">
+                        <h3>Архитектурная модель</h3>
+                        <p>Масштабная модель жилого комплекса</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="art">
+                    <img src="assets/images/gallery/item3.jpg" alt="3D-печать арт-объекта">
+                    <div class="gallery-overlay">
+                        <h3>Декоративная скульптура</h3>
+                        <p>Художественный объект для интерьера</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="prototypes">
+                    <img src="assets/images/gallery/item4.jpg" alt="3D-печать детали">
+                    <div class="gallery-overlay">
+                        <h3>Деталь для дрона</h3>
+                        <p>Легкая и прочная деталь для беспилотника</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="models">
+                    <img src="assets/images/gallery/item5.jpg" alt="3D-модель продукта">
+                    <div class="gallery-overlay">
+                        <h3>Корпус устройства</h3>
+                        <p>Прототип корпуса для автомобили</p>
+                    </div>
+                </div>
+                <div class="gallery-item" data-category="art">
+                    <img src="assets/images/gallery/item6.jpg" alt="3D-печать фигурки">
+                    <div class="gallery-overlay">
+                        <h3>Коллекционная фигурка</h3>
+                        <p>Детализированная фигурка персонажа</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- О нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="section-title">О <span class="highlight">компании</span></h2>
+                    <p>Наша компания специализируется на профессиональной 3D-печати с 2024 года. Мы используем передовое оборудование и инновационные материалы для создания высококачественных изделий.</p>
+                    <p>Команда опытных инженеров и дизайнеров поможет воплотить в жизнь ваши самые смелые идеи, от концепции до готового продукта.</p>
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">150+</span>
+                            <span class="stat-label">Выполненных проектов</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">30+</span>
+                            <span class="stat-label">Постоянных клиентов</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Лет опыта</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="assets/images/about/3d-printer.jpg" alt="3D-принтер в работе">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Свяжитесь с <span class="highlight">нами</span></h2>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Ave. Arshakunyats 15, 42<br>Yerevan, Armenia</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+374 (044) 48-14-48</p>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>info@axisbox.am</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/people/AxisBox/61581265873529/?rdid=hkNcqRdP8cxLtv6X&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1BbujaQFSs%2F" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.instagram.com/axisbox/?igsh=MTU4MWw3M3JkdW5iZA%3D%3D#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-vk"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <svg width="40" height="40" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="#00FFAA" stroke-width="2"/>
+                        <path d="M25 5V25M25 25L45 15M25 25L5 15" stroke="#00FFAA" stroke-width="2"/>
+                    </svg>
+                    <span>Axis Box</span>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Навигация</h3>
+                        <ul>
+                            <li><a href="#home">Главная</a></li>
+                            <li><a href="#services">Услуги</a></li>
+                            <li><a href="#gallery">Галерея</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#contact">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Услуги</h3>
+                        <ul>
+                            <li><a href="#services">3D-печать</a></li>
+                            <li><a href="#services">3D-моделирование</a></li>
+                            <li><a href="#services">Прототипирование</a></li>
+                            <li><a href="#services">Мелкосерийное производство</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Контакты</h3>
+                        <ul>
+                            <li>Ave. Arshakunyats 15</li>
+                            <li>Yerevan, Armenia</li>
+                            <li>+374 (044) 48-14-48</li>
+                            <li>info@axisbox.am</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Axis Box. Все права защищены. <a href="admin-login.html" class="admin-link">.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
