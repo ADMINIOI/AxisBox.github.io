@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель | Axis Box</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="admin-panel">
+        <!-- Боковое меню -->
+        <div class="admin-sidebar">
+            <div class="admin-sidebar-header">
+                <div class="admin-logo">
+                    <svg width="30" height="30" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M25 5V25M25 25L45 15M25 25L5 15" stroke="#00FFAA" stroke-width="2"/>
+                    </svg>
+                    <span>Axis Box</span>
+                </div>
+            </div>
+            <ul class="admin-menu">
+                <li><a href="#" class="active"><i class="fas fa-tachometer-alt"></i> <span>Панель управления</span></a></li>
+                <li><a href="#"><i class="fas fa-chart-line"></i> <span>Статистика</span></a></li>
+                <li><a href="#"><i class="fas fa-users"></i> <span>Посетители</span></a></li>
+                <li><a href="#"><i class="fas fa-cog"></i> <span>Настройки</span></a></li>
+                <li><a href="index.html"><i class="fas fa-home"></i> <span>Вернуться на сайт</span></a></li>
+            </ul>
+        </div>
+
+        <!-- Основной контент -->
+        <div class="admin-content">
+            <div class="admin-header">
+                <div class="admin-title">
+                    <h1>Панель управления</h1>
+                </div>
+                <div class="admin-user-info">
+                    <span>Admin</span>
+                    <button id="logout-btn" class="logout-btn">Выйти</button>
+                </div>
+            </div>
+
+            <!-- Карточки с показателями -->
+            <div class="dashboard-cards">
+                <div class="dashboard-card">
+                    <h3>Посетители сегодня</h3>
+                    <div class="value">124</div>
+                    <div class="change positive">+12% с вчера</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Просмотры страниц</h3>
+                    <div class="value">568</div>
+                    <div class="change positive">+8% с вчера</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Среднее время на сайте</h3>
+                    <div class="value">3:45</div>
+                    <div class="change negative">-2% с вчера</div>
+                </div>
+                <div class="dashboard-card">
+                    <h3>Показатель отказов</h3>
+                    <div class="value">32%</div>
+                    <div class="change positive">-5% с вчера</div>
+                </div>
+            </div>
+
+            <!-- График посещаемости -->
+            <div class="chart-container">
+                <canvas id="visitsChart"></canvas>
+            </div>
+
+            <!-- Таблица последних посещений -->
+            <h2>Последние посещения</h2>
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>IP адрес</th>
+                        <th>Страница</th>
+                        <th>Время</th>
+                        <th>Устройство</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>192.168.1.105</td>
+                        <td>Главная страница</td>
+                        <td>Сегодня, 14:32</td>
+                        <td>Desktop / Chrome</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.1.87</td>
+                        <td>Галерея</td>
+                        <td>Сегодня, 14:28</td>
+                        <td>Mobile / Safari</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.1.42</td>
+                        <td>Контакты</td>
+                        <td>Сегодня, 14:15</td>
+                        <td>Tablet / Firefox</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.1.76</td>
+                        <td>О компании</td>
+                        <td>Сегодня, 14:05</td>
+                        <td>Desktop / Edge</td>
+                    </tr>
+                    <tr>
+                        <td>192.168.1.29</td>
+                        <td>Услуги</td>
+                        <td>Сегодня, 13:58</td>
+                        <td>Mobile / Chrome</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="js/admin.js"></script>
+</body>
+</html>
