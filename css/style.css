@@ -826,3 +826,27 @@ footer {
         gap: 30px;
     }
 }
+
+.language-switcher {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.language-switcher button {
+  border: 2px solid #00FFAA;
+  background-color: #000;
+  color: #00FFAA;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 999px; /* делает края полностью округлыми */
+
+}
+
+.language-switcher button:hover {
+  background-color: #00FFAA;
+  color: #000;
+}
