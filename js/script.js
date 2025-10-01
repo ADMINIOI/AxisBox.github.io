@@ -204,3 +204,16 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('load', animateOnScroll);
     window.addEventListener('scroll', animateOnScroll);
 });
+
+function switchLanguage(targetPage) {
+  document.body.style.transition = 'opacity 0.5s ease';
+  document.body.style.opacity = '0';
+
+  setTimeout(() => {
+    window.location.href = targetPage;
+  }, 500);
+}
+
+window.addEventListener('pageshow', () => {
+  document.body.style.opacity = '1';
+});
